@@ -1,0 +1,77 @@
+/** 
+*@Filename:calculate.html
+*@Date:29-09-2016
+*@Purpose:Click the button to change the layout of this paragraph
+*@Created By:SWati SD
+*/
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <script>
+function multiply(){
+a=Number(document.cal.first.value);
+b=Number(document.cal.second.value);
+c=a*b;
+document.cal.total.value=c;
+}
+</script>
+ 
+<script>
+function addition(){
+a=Number(document.cal.first.value);
+b=Number(document.cal.second.value);
+c=a+b;
+document.cal.total.value=c;
+}
+</script>
+ 
+<script>
+function subtraction(){
+a=Number(document.cal.first.value);
+b=Number(document.cal.second.value);
+c=a-b;
+document.cal.total.value=c;
+}
+</script>
+ 
+<script>
+function division(){
+a=Number(document.cal.first.value);
+b=Number(document.cal.second.value);
+c=a/b;
+document.cal.total.value=c;
+}
+</script>
+ 
+</head>
+<body>
+    <!-- Opening a HTML Form. -->
+<form name="cal">
+ 
+<!-- Here user will enter 1st number. -->
+Number 1 <input type="text" name="first"> <br>
+  
+ 
+<!-- Here user will enter 2nd number. -->
+Number 2 <input type="text" name="second"> <br>
+ 
+ 
+<!-- Here result will be displayed. -->
+
+ Result <input type="text" name="total"> <br>
+ 
+<input type="button" value="ADD" onclick="addition();"> <br>
+<input type="button" value="SUB" onclick="subtraction();"> <br>
+<input type="button" value="MUL" onclick="multiply();"> <br>
+<input type="button" value="DIV" onclick="division();"> <br>
+</form>
+    
+</body>
+</html>
+
+
+
+
+
