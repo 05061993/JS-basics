@@ -1,0 +1,115 @@
+/**
+*@fileName:json.html
+*@createBy:Swati
+*@date:06/10/16
+*@purpose:digital clock with random articles
+*/
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<style>
+    .maindiv {
+        background-color:"blue";
+        width: 300px;
+        border: 15px solid pink;
+        padding: 25px;
+    }
+
+    .show{
+        background-color:"yellow";
+        padding: 25px;
+          border: 15px solid #ff6e6e;
+
+    }
+    .show2{
+        background-color:"yellow";
+      margin-top:10px;
+        padding: 25px;
+          border: 15px solid #ff6e6e;
+
+    }
+
+
+    }
+</style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+
+
+
+            function startTime() {
+                var today = new Date();
+                var h = today.getHours();
+                var m = today.getMinutes();
+                var s = today.getSeconds();
+                document.getElementById("txt").innerHTML =h + ":" + m + ":" + s;
+                setTimeout(startTime, 2000);
+            }
+
+
+            var article = [{
+                "author": "swati",
+                "date": "05/10/12",
+                "publication": "xyz"
+            },
+              {  "author": "shruti",
+                "date": "03/10/11",
+                "publication": "abc"
+            },{
+                "author": "gayatri",
+                "date": "05/10/15",
+                "publication": "programs"
+            }];
+
+
+            function myfunction() {
+                var i = Math.floor(Math.random() * article.length);
+                if (i <= article.length) {
+
+                    document.getElementById("d1").innerHTML =article[i].author;
+                    document.getElementById("d2").innerHTML =  article[i].date;
+                    document.getElementById("d3").innerHTML =  article[i].publication;
+                    var t = setTimeout(myfunction, 2000);
+                }
+            }
+    </script>
+</head>
+
+<body  bgcolor="cyan" onload="startTime();myfunction();">
+    <div class="maindiv">
+        <div id="txt" class="show"></div>
+        <div class="show2">
+            <table>
+                <tr>
+                    <td>author--></td>
+                    <td id="d1" ></td>
+                </tr>
+
+                <tr>
+                    <td>date--></td>
+                    <td id="d2" ></td>
+                </tr>
+
+                <tr>
+                    <td>publication--></td>
+                    <td id="d3" ></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
