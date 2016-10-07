@@ -1,0 +1,47 @@
+/** 
+*@Filename:currying.html
+*@Date:07-10-2016
+*@Purpose:currying concept of js
+*@Created By:SWati SD
+*/
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=
+   initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+<script>
+var addition = function(a) {
+       return function(b) {
+           return a + b;
+       }
+   };
+
+
+   var division = function(a) {
+       return function(b) {
+           return a / b;
+       }
+   };
+
+   var add = addition(10);  // returns addition funstion with sec arg i,e  var add=function(b){RETURNS a+b}
+
+  var addto = add(20);
+  document.write("addition of two numbers: " + addto + "<br>");
+  var div = division(20);
+  var divide = div(10);
+    document.write("division of two numbers: " + divide + "<br>");
+</script>
+
+
+
+
+</head>
+<body>
+
+</body>
+</html>
