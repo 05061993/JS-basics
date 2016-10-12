@@ -1,0 +1,41 @@
+
+/** 
+*@Filename:chaining.html
+*@Date:07-10-2016
+*@Purpose: working of chaining method
+*@Created By:SWati SD
+*/
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+var calculate = function(){
+ this.num1 = 0;
+ this.num2 = 0;
+}
+    calculate.prototype.First = function(num1){
+             this.num1 = num1;
+     }
+      calculate.prototype.Second = function(num2){
+              this.num2 = num2;
+      }
+          calculate.prototype.sum = function(){
+              var result= this.num1+this.num2;
+                  document.write("the result is "+result);
+             }
+                var abc = new calculate();
+                  abc.First(10);
+                  abc.Second(20);
+                   abc.sum();
+</script>
+
+</body>
+</html>
