@@ -1,0 +1,52 @@
+/** 
+*@Filename:cals.html
+*@Date:04-10-2016
+*@Purpose:arithmatic operations using dropdown box
+*@Created By:SWati SD
+*/
+<html>
+<head>
+    <script type="text/javascript">
+function calculate(oper)
+{
+    var a=Number(document.cal.num1.value);
+    var b=Number(document.cal.num2.value);
+    
+    switch(oper)
+    {
+  
+        case "addition":
+        var c=a+b;
+        break;
+        case "subtraction":
+        var c=a-b;
+        break;
+        case "multiplication":
+        var c=a*b;
+        break;
+        case "division":
+        var c=a/b;
+        break;
+    
+}
+document.cal.res.value=c;
+}
+</script>
+</head>
+
+<body>
+    <form name="cal">
+        Enter 1st num:<input type="text" name="num1" /><br/> Enter 2nd num:<input type="text" name="num2" /><br/> Select
+        operation:
+        <select name="select" onchange="calculate(this.value)">
+<option>select here</option>
+<option value="addition" >add</option>
+<option value="subtraction" >sub</option>
+<option value="multiplication" >mul</option>
+<option value="division" >div</option>
+</select>
+        <input type="text" name="res"></input>
+    </form>
+</body>
+
+</html>
