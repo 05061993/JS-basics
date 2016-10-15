@@ -1,45 +1,40 @@
-/** 
-*@Filename:EqualityofObj.html
-*@Date:04-10-2016
-*@Purpose:checking of object equality
-*@Created By:SWati SD
-*/
+/** *@Filename:EqualityofObj.html *@Date:04-10-2016 *@Purpose:checking of object equality *@Created By:SWati SD */
 
-<!DOCTYPE html>
 <html>
 
+<head>
+    <title>euality</title>
+</head>
+
 <body>
-    <p id="demo" /></p>
     <script>
-        var a=20;
-var car = {
-    name:"swift",
-    color:"red"
-};
-var person = {
-      name:"SWati",
-      age:23
-};
-
-var y = new String("John"); 
-var x=new String("xyz");
-
-    if(typeof y == typeof x)
-    {   document.write('yes objects are equal..');
-    }
-    else
-    {
-    document.write(' objects are not not equal..');
-    }
-   /* if(x==y)
-    {
-           console.log('yes');
-
-    }
-      else
-    {
-   console.log('no');
-    }*/
- </script>
+        /**
+         *compare two strings
+         *@constructor
+         *@param{strings}-a,b passing the two strings into the function
+         */
+        function check(a, b) {
+            if (a === b) {
+                document.write("both are equal" + "<br>");
+            } else {
+                document.write("both are not equal" + "<br>");
+            }
+        }
+        var person1 = {
+            name: "swati",
+            address: "12345"
+        }
+        var person2 = {
+            name: "shruti",
+            address: "3555"
+        }
+        var person3 = person1;
+        /**
+         *@function calling
+         */
+        check(person1, person3);
+        document.write(".................................." + "<br>");
+    </script>
 </body>
+
 </html>
